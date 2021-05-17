@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jarnix/tresvitemadose#readme",
   "dependencies": {
+    "chalk": "^4.1.1",
     "node-notifier": "^9.0.1",
     "playwright": "^1.11.0"
   }
