@@ -21,10 +21,8 @@ const area = process.argv[3];
 
 const maxPages = 3;
 const baseUrls = {
-  pfizer:
-    `https://www.doctolib.fr/vaccination-covid-19/${area}?force_max_limit=2&ref_visit_motive_id=6970&ref_visit_motive_ids%5B%5D=6970&ref_visit_motive_ids%5B%5D=7005`,
-  moderna:
-    `https://www.doctolib.fr/vaccination-covid-19/${area}?force_max_limit=2&ref_visit_motive_id=7005&ref_visit_motive_ids%5B%5D=6970&ref_visit_motive_ids%5B%5D=7005`,
+  pfizer: `https://www.doctolib.fr/vaccination-covid-19/${area}?force_max_limit=2&ref_visit_motive_id=6970&ref_visit_motive_ids%5B%5D=6970&ref_visit_motive_ids%5B%5D=7005`,
+  moderna: `https://www.doctolib.fr/vaccination-covid-19/${area}?force_max_limit=2&ref_visit_motive_id=7005&ref_visit_motive_ids%5B%5D=6970&ref_visit_motive_ids%5B%5D=7005`,
 };
 
 const vaccineName = vaccineArg;
@@ -96,6 +94,7 @@ function getRandomArbitrary(min, max) {
         message: "RDV disponibles pour " + vaccineName,
         sound: true,
         open: url,
+        wait: true,
       });
 
       await page.screenshot({ path: filename, fullPage: true });
